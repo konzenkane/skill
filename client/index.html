@@ -669,38 +669,21 @@
                     alert('查看深度评测报告');
                 },
                 async downloadSkill(skill) {
-    if (skill.name === 'lobster-memory') {
-        // GitHub Pages 直接下载
-        const githubUser = window.location.hostname.split('.')[0];
-        const downloadUrl = `https://raw.githubusercontent.com/${githubUser}/skill/main/server-lite/downloads/lobster-memory-skill-v1.0.0.tar.gz`;
-        
-        const link = document.createElement('a');
-        link.href = downloadUrl;
-        link.setAttribute('download', 'lobster-memory-skill-v1.0.0.tar.gz');
-        link.setAttribute('target', '_blank');
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        
-        alert('🦞 龙虾记忆大师下载开始！\n\n安装方法：\n1. 解压文件\n2. 放到 ~/.openclaw/skills/ 目录\n3. 重启 OpenClaw\n\n本技能由天道桐哥 & AI龙虾元龙联合出品 ⭐⭐⭐⭐⭐');
-    } else {
-        window.open(skill.url, '_blank');
-    }
-},                            
-                            // 创建下载链接
-                            const url = window.URL.createObjectURL(new Blob([response.data]));
-                            const link = document.createElement('a');
-                            link.href = url;
-                            link.setAttribute('download', 'lobster-memory-skill-v1.0.0.tar.gz');
-                            document.body.appendChild(link);
-                            link.click();
-                            link.remove();
-                            window.URL.revokeObjectURL(url);
-                            
-                            alert('🦞 龙虾记忆大师下载开始！\n\n安装方法：\n1. 解压文件\n2. 放到 ~/.openclaw/skills/ 目录\n3. 重启 OpenClaw\n\n本技能由天道桐哥 & AI龙虾元龙联合出品 ⭐⭐⭐⭐⭐');
-                        } catch (err) {
-                            alert('下载失败，请稍后重试');
-                        }
+                    if (skill.name === 'lobster-memory') {
+                        // GitHub Pages 直接下载
+                        const githubUser = window.location.hostname.split('.')[0]; // 从域名获取用户名
+                        const downloadUrl = `https://raw.githubusercontent.com/${githubUser}/skill/main/server-lite/downloads/lobster-memory-skill-v1.0.0.tar.gz`;
+                        
+                        // 创建下载链接
+                        const link = document.createElement('a');
+                        link.href = downloadUrl;
+                        link.setAttribute('download', 'lobster-memory-skill-v1.0.0.tar.gz');
+                        link.setAttribute('target', '_blank');
+                        document.body.appendChild(link);
+                        link.click();
+                        link.remove();
+                        
+                        alert('🦞 龙虾记忆大师下载开始！\n\n安装方法：\n1. 解压文件\n2. 放到 ~/.openclaw/skills/ 目录\n3. 重启 OpenClaw\n\n本技能由天道桐哥 & AI龙虾元龙联合出品 ⭐⭐⭐⭐⭐');
                     } else {
                         // 跳转到原始链接
                         window.open(skill.url, '_blank');

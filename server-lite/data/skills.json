@@ -582,5 +582,31 @@
     "source": "clawhub",
     "category": "other",
     "crawledAt": "2026-03-22T05:31:03.334Z"
+  },
+  {
+    "name": "audit-website",
+    "nameCn": "auditwebsite",
+    "icon": "📦",
+    "author": "squirrelscan",
+    "stars": 71,
+    "downloads": 1929,
+    "desc": "Discover and install skills for AI agents.",
+    "url": "https://skills.sh/squirrelscan/skills/audit-website",
+    "source": "clawhub",
+    "category": "other",
+    "crawledAt": "2026-03-22T06:30:25.601Z"
+  },
+  {
+    "name": "create-auth-skill",
+    "nameCn": "createauthskill",
+    "icon": "📦",
+    "author": "better-auth",
+    "stars": 17,
+    "downloads": 3124,
+    "desc": "Discover and install skills for AI agents.",
+    "url": "https://skills.sh/better-auth/skills/create-auth-skill",
+    "source": "clawhub",
+    "category": "other",
+    "crawledAt": "2026-03-22T06:30:31.124Z"
   }
 ]
