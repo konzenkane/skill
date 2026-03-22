@@ -686,10 +686,7 @@
     } else {
         window.open(skill.url, '_blank');
     }
-},
-                                responseType: 'blob'
-                            });
-                            
+},                            
                             // 创建下载链接
                             const url = window.URL.createObjectURL(new Blob([response.data]));
                             const link = document.createElement('a');
